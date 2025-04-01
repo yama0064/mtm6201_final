@@ -1,3 +1,5 @@
-header img{
-    width: 100px;
-}
+.wrapper {
+    background-image: url('/images/outdoor-dining-1846137_1280.jpg');
+    background-size: cover;
+    background-position: center;
+  }
