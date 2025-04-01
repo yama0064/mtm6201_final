@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
+
+* {
+    background-color: #FFFEF0;
+}
+
+h2, p {
+    font-family: "Domine", serif;
+}
+
+h2, h3{
+    color: #734E39 !important;
+    font-family: "Domine", serif;
+}
