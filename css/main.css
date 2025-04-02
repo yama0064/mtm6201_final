@@ -66,7 +66,26 @@
       height: auto;           /* Maintain aspect ratio */
   }
 
-  h3 {
+  .food-menu {
+    border: solid black 1px;
+    align-items: center;    /* Center content horizontally */
+    margin: 1rem;
+  }
+
+  .food-menu h3 {
     padding-left: 1rem;
     padding-top: 2rem;
+  }
+
+  .food-menu p {
+    padding-left: 1rem;
+  }
+
+  .food-menu img {
+    max-width: 100%;        /* Image takes up full width of the container */
+      height: auto;           /* Maintain aspect ratio */
+  }
+
+  .seasonal-menu {
+    
   }
