@@ -17,6 +17,7 @@
   .wrapper h2, .wrapper p {
     color: white;
   } */
+   
   .green-button {
     background-color: #89BF37; /* Set the background color */
     color: white;              /* Set the text color to white */
@@ -28,6 +29,37 @@
     border-radius: 5px;        /* Add rounded corners */
     cursor: pointer;          /* Change the cursor to a pointer on hover */
   }
+
+  .white-button {
+    background-color: white; /* Set the background color */
+    color: black;              /* Set the text color to white */
+    border: solid black 1px;              /* Remove the border */
+    padding: 0.5rem 2rem;        /* Add padding to make the button larger */
+    font-family: "Domine", serif; /* Use the specified font family */
+    text-align: center;        /* Center the text */
+    text-decoration: none;     /* Remove any text decorations */
+    border-radius: 5px;        /* Add rounded corners */
+    cursor: pointer;          /* Change the cursor to a pointer on hover */
+  }
+
+  .brown-button {
+    background-color: #734E39; /* Set the background color */
+    color: white;              /* Set the text color to white */
+    border: none;              /* Remove the border */
+    padding: 0.5rem 2rem;        /* Add padding to make the button larger */
+    font-family: "Domine", serif; /* Use the specified font family */
+    text-align: center;        /* Center the text */
+    text-decoration: none;     /* Remove any text decorations */
+    border-radius: 5px;        /* Add rounded corners */
+    cursor: pointer;          /* Change the cursor to a pointer on hover */
+  }
+
+  .button-group {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  gap: 1rem;               /* Add space between the buttons */
+  margin-top: 1.5rem;      /* Optional: spacing above */
+}
   
 
   @media (max-width: 576px) {
@@ -51,15 +83,10 @@
     }
   }
 
-  .about, .work{
-    display: flex;  
-    flex-direction: column; /* Switch to column layout for small screens */
-    align-items: center;    /* Center content horizontally */
-    justify-content: center; /* Center content vertically */
-    text-align: center;     /* Center text */
-    padding: 0 1rem;          /* Adjust padding for smaller screens */
-    gap: 0.5rem;
+  .paragraphs h3 {
+    margin-top: 2rem;
   }
+
 
   .about img, .work img {
     max-width: 100%;        /* Image takes up full width of the container */
@@ -69,23 +96,45 @@
   .food-menu {
     border: solid black 1px;
     align-items: center;    /* Center content horizontally */
-    margin: 1rem;
+    margin: 0 1rem;
   }
 
   .food-menu h3 {
-    padding-left: 1rem;
-    padding-top: 2rem;
+    text-align: center;
+    padding-top: 1rem;
+    background-color: #fff;
   }
 
   .food-menu p {
-    padding-left: 1rem;
+    margin: 0.5rem 0; /* or adjust as needed */
+    background-color: #fff;
   }
 
   .food-menu img {
     max-width: 100%;        /* Image takes up full width of the container */
-      height: auto;           /* Maintain aspect ratio */
+    height: auto;           /* Maintain aspect ratio */
+    background-color: #fff;
   }
 
   .seasonal-menu {
-    
+    display: flex;
+    flex-wrap: nowrap;         /* Keep items in a single row */
+    overflow-x: auto;          /* Enable horizontal scrolling */
+    gap: 0.2rem;                 /* Space between cards */
+    scroll-snap-type: x mandatory; /* Optional: smooth snapping for each item */
+  }
+
+  .food-menu {
+    min-width: 250px;          /* Control width of each card */
+    max-width: 300px;
+    max-height: 450px;
+    flex: 0 0 auto;            /* Prevent shrinking */
+    scroll-snap-align: start;  /* Optional: align snap */
+    overflow-x: auto; /* Allow horizontal scrolling if necessary */
+    overflow-y: hidden; /* Prevent vertical scrolling */
+    border: solid black 1px;
+    padding: 1rem;
+    border-radius: 5px;
+    background: #fff;
+    align-items: center;
   }
