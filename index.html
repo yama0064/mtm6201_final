@@ -126,7 +126,6 @@
               <div>
                 <label for="validationCustom01">Email Address</label>
                 <input type="text" class="form-control" id="validationCustom02" placeholder="Enter email" required>
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
@@ -138,22 +137,30 @@
               <label for="exampleFormControlTextarea1">Message</label>
               <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Enter message" rows="4" required></textarea>
             </div>
-            <button type="submit" class="btn btn-md btn-primary mt-3" style="background-color: #89BF37; border: none; padding: 0.5rem 2rem;">Submit</button>
+            <button type="submit" class="btn btn-md btn-primary" style="background-color: #89BF37; border: none; padding: 0.5rem 2rem;">Submit</button>
           </form>
       </section>
-        <footer>
-            <nav>
-                <li>Menu</li>
-                <li>Order</li>
-                <li>About Us</li>
-                <li>Contact</li>
-            </nav>
-            <div class="icons">
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
+        <footer class="d-flex flex-column align-items-center">
+          <ul class="navbar-nav mx-auto d-flex flex-row gap-2">
+            <li class="nav-item">
+              <a class="nav-link active fs-5" aria-current="page" href="#">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fs-5" aria-current="page" href="#">Order</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fs-5" aria-current="page" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fs-5" aria-current="page" href="#">Contact</a>
+            </li>
+           </ul> 
+            <div class="icons d-flex flex-row gap-2">
+              <i class="bi bi-youtube"></i>
+              <i class="bi bi-facebook"></i>
+              <i class="bi bi-twitter"></i>
+              <i class="bi bi-instagram"></i>
+              <i class="bi bi-linkedin"></i>
             </div>
             <p>&copy;PlantPalette @ 2025. All rights reserved.</p>
         </footer>

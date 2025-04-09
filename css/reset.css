@@ -15,3 +15,7 @@ h2, h3{
     font-family: "Domine", serif;
     font-weight: bold;
 }
+
+:root {
+    --secondary-color: #68902B;
+  }
