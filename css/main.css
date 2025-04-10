@@ -17,7 +17,23 @@
   .wrapper h2, .wrapper p {
     color: white;
   } */
-   
+  
+  * {
+      background-color: #FFFEF0;
+      padding: 0 .1rem;
+  }
+
+  p {
+      font-family: "Domine", serif;
+      font-weight: 100;
+  }
+
+  h2, h3{
+      color: #734E39 !important;
+      font-family: "Domine", serif;
+      font-weight: bold;
+  }
+
   :root {
     --secondary-color: #68902B; /* Background color for footer */
     --secondary-text-color: white; /* Secondary text color */
@@ -88,6 +104,39 @@
       text-align: center; /* Center the text on small screens */
     }
   }
+
+  @media (min-width: 577px) and (max-width: 768px) {
+    .wrapper {
+      display: flex;
+      flex-direction: column; /* Switch to column layout for small screens */
+      align-items: center; /* Center content horizontally */
+      justify-content: center; /* Center content vertically */
+      text-align: center; /* Center text */
+      padding: 1rem; /* Adjust padding for smaller screens */
+      gap: 0.5rem;
+      background-image: url("https://cdn.pixabay.com/photo/2016/11/21/16/02/outdoor-dining-1846137_1280.jpg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      overflow: hidden; /* Prevent content from pushing the image down */
+      padding-top: 20rem;
+      margin-bottom: 2rem;
+    }
+  
+    .wrapper h2, .wrapper p, .order-button {
+      text-align: center; /* Center the text on small screens */
+      color: var(--secondary-text-color) !important; /* Use the secondary text color */
+    }
+
+    .wrapper h2, .wrapper p {
+      background-color: transparent;
+    }
+
+    .wrapper img{
+      display: none;
+    }
+  }
+
   
   /* Sections */
   .paragraphs h3 {
