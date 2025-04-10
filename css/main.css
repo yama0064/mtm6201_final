@@ -18,7 +18,7 @@
     color: white;
   } */
   
-  * {
+  body {
       background-color: #FFFEF0;
       padding: 0 .1rem;
   }
@@ -103,9 +103,17 @@
     .wrapper h2, .wrapper p, .order-button {
       text-align: center; /* Center the text on small screens */
     }
+
+    .paragraphs div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
   }
 
-  @media (min-width: 577px) and (max-width: 768px) {
+  @media (min-width: 577px) and (max-width: 1200px) {
     .wrapper {
       display: flex;
       flex-direction: column; /* Switch to column layout for small screens */
@@ -116,6 +124,7 @@
       gap: 0.5rem;
       background-image: url("https://cdn.pixabay.com/photo/2016/11/21/16/02/outdoor-dining-1846137_1280.jpg");
       background-size: 100%;
+      background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
       overflow: hidden; /* Prevent content from pushing the image down */
@@ -135,25 +144,68 @@
     .wrapper img{
       display: none;
     }
+
+    .paragraphs > div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "text image"
+        "button button";
+      gap: 1rem;
+      align-items: start;
+      padding: 1rem;
+      text-align: left;
+    }
+  
+    .paragraphs > div p {
+      grid-area: text;
+      align-self: start;
+    }
+  
+    .paragraphs > div img {
+      grid-area: image;
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      align-self: start;
+    }
+  
+    .paragraphs > div a {
+      grid-area: button;
+      justify-self: center;
+      margin-top: 1rem;
+    }
   }
 
+  @media (min-width: 768px) {
+    .seasonal-menu {
+      padding-left: 2rem;
+      gap: 1.5rem !important;
+    }
+
+    .paragraphs p a {
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+  }
   
   /* Sections */
   .paragraphs h3 {
     margin-top: 2rem;
+    margin-left: 1rem;
   }
-  
-  .about img, .work img {
+
+  .paragraphs div img {
     max-width: 100%; /* Image takes up full width of the container */
     height: auto; /* Maintain aspect ratio */
   }
-  
-  .food-menu {
-    border: solid black 1px;
-    align-items: center; /* Center content horizontally */
-    margin: 0 1rem;
-  }
-  
+
+  .paragraphs p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+  }  
+
   .food-menu h3 {
     text-align: center;
     padding-top: 1rem;
