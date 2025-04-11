@@ -180,7 +180,15 @@
       line-height: 1.8;
     }
   }
-  
+
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Make sure it's above other elements */
+    background-color: #FFFEF0; /* Match your site background */
+  }
+
   /* Sections */
   .paragraphs h3 {
     margin-top: 2rem;
@@ -286,11 +294,17 @@
     list-style: none; /* Remove bullet points */
     padding: 0;
     margin: 0;
+
   }
   
-  .menu-nav a {
+  .menu-nav li {
     text-decoration: underline;
     color: #734E39; /* Match your brand */
     font-family: "Domine", serif;
     font-weight: bold;
+    font-size: 1.5rem !important;
+  }
+
+  .menu-item {
+    cursor: pointer;
   }
