@@ -16,6 +16,14 @@ h2, h3{
     font-weight: bold;
 }
 
+h1 {
+    font-family: "Domine", serif;
+    font-weight: bold;
+    
+}
+
 :root {
-    --secondary-color: #68902B;
-  }
+  --secondary-color: #68902B; /* Background color for footer */
+  --secondary-text-color: white; /* Secondary text color */
+}
+
