@@ -5,6 +5,10 @@
     padding: 0 .1rem;
 }
 
+body, main {
+    margin: 0;
+  }
+
 p {
     font-family: "Domine", serif;
     font-weight: 100;

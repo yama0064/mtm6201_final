@@ -9,71 +9,67 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Bootstrap Icons -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!-- Hover.css -->
+    <link href="css/hover.css" rel="stylesheet">
 </head>
-<body>
-    <header class="row">
-      <nav class="navbar navbar-expand-md navbar-light border-bottom border-dark-subtle" style="background-color: #FFFEF0;" data-bs-theme="light">
-          <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                  <img src="images/plant-pallete-logo.png" alt="" width="150" height="60">
-                </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mx-auto mb-2 mb-md-0 gap-3">
-                <li class="nav-item">
-                  <a class="nav-link active fs-5" aria-current="page" href="#">Menu</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active fs-5" aria-current="page" href="#">Order</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active fs-5" aria-current="page" href="#">About Us</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active fs-5" aria-current="page" href="#">Contact</a>
-                </li>
-                <li class="nav-item">
-                  <span class="nav-link active fs-6 d-md-none">PlantPalette @ 2025. All rights reserved.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-    </header>
+<body><a href="#main-content" class="visually-hidden-focusable">Skip to main content</a>
+  <header class="row" role="banner">
+    <nav class="navbar navbar-expand-md navbar-light border-bottom border-dark-subtle" style="background-color: #FFFEF0;" data-bs-theme="light" role="navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="images/plant-pallete-logo.png" href="home.html" alt="Logo of PlantPalette" width="150" height="60" itemprop="image">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-md-0 gap-3">
+            <li class="nav-item"><a class="nav-link active fs-5" href="menu.html">Menu</a></li>
+            <li class="nav-item"><a class="nav-link active fs-5" href="#">Order</a></li>
+            <li class="nav-item"><a class="nav-link active fs-5" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link active fs-5" href="#">Contact</a></li>
+            <li class="nav-item"><span class="nav-link active fs-6 d-md-none">PlantPalette @ 2025. All rights reserved.</span></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-    <main>
+    <main id="main-content">
         <section class="wrapper">
-            <img src="images/outdoor-dining-1846137_1280.jpg" alt="Image of PlantPalette" class="hero-image">
+            <img src="images/outdoor-dining-1846137_1280.jpg" alt="Image of PlantPalette" class="hero-image" itemprop="image">
             <h2>Enjoy plant-based foods!</h2>
-            <p>Fresh, seasonal, and artfully crafted. At Plant Palette, we bring you vibrant plant-based cuisine for dining in, takeout, and special events.</p>
-            <a href="" class="green-button">Order Now</a>
+            <p itemprop="description">Fresh, seasonal, and artfully crafted. At Plant Palette, we bring you vibrant plant-based cuisine for dining in, takeout, and special events.</p>
+            <a href="" class="green-button hvr-fade">Order Now</a>
         </section>
-        <section class="specials">
-            <h2 class="px-3">Seasonal Specials</h2>
+        <section class="specials" aria-labelledby="seasonal-heading">
+            <h2 class="px-3" id="seasonal-heading">Seasonal Specials</h2>
             <section class="seasonal-menu">
-                <div class="food-menu">
-                    <img src="images/Firefly Grilled Veggie Bowl, plant-based, wooden table 48408.jpg" alt="Image of Grilled Veggie Bowl">
+              <article itemscope itemtype="https://schema.org/MenuItem" class="food-menu">
+                    <img src="images/Firefly Grilled Veggie Bowl, plant-based, wooden table 48408.jpg" alt="Image of Grilled Veggie Bowl" itemprop="image">
                     <h3>Grilled Veggie Bowl</h3>
-                    <p>Grilled seasonal vegetables served with quinoa and a tangy dressing.</p>
-                    <p>$ 14</p>
-                </div>
-                <div class="food-menu">
-                    <img src="images/Firefly Roasted Cauliflower Tacos, plant-based, wooden table 48408.jpg" alt="Image of Roasted Cauliflower Tacos">
+                    <p itemprop="description">Grilled seasonal vegetables served with quinoa and a tangy dressing.</p>
+                    <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                      <span itemprop="priceCurrency" content="CAD">$</span><span itemprop="price">16</span>
+                    </span>
+              </article>  
+              <article itemscope itemtype="https://schema.org/MenuItem" class="food-menu">
+                    <img src="images/Firefly Roasted Cauliflower Tacos, plant-based, wooden table 48408.jpg" alt="Image of Roasted Cauliflower Tacos" itemprop="image">
                     <h3>Cauliflower Tacos</h3>
-                    <p>Roasted cauliflower in soft tortillas, topped with salsa and avocado.</p>
-                    <p>$ 12</p>
-                    <i></i>
-                </div>
-                <div class="food-menu">
-                    <img src="images/Firefly Mushroom Stroganoff, plant-based, wooden table 72010.jpg" alt="Image of Mushroom Stroganoff">
+                    <p itemprop="description">Roasted cauliflower in soft tortillas, topped with salsa and avocado.</p>
+                    <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                      <span itemprop="priceCurrency" content="CAD">$</span><span itemprop="price">16</span>
+                    </span>
+              </article> 
+              <article itemscope itemtype="https://schema.org/MenuItem" class="food-menu">
+                    <img src="images/Firefly Mushroom Stroganoff, plant-based, wooden table 72010.jpg" alt="Image of Mushroom Stroganoff" itemprop="image">
                     <h3>Mushroom Stroganoff</h3>
-                    <p>Creamy mushroom sauce over pasta, with garlic and earthy mushrooms.</p>
-                    <p>$ 16</p>
-                    <i></i>
-                </div>
+                    <p itemprop="description">Creamy mushroom sauce over pasta, with garlic and earthy mushrooms.</p>
+                    <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                      <span itemprop="priceCurrency" content="CAD">$</span><span itemprop="price">16</span>
+                    </span>
+              </article> 
             </section>
             <div class="button-group">
               <a href="" class="white-button">See Full Menu</a>
@@ -82,20 +78,20 @@
         </section>
         <section class="paragraphs">
             <h3>About Us</h3>
-            <div class="about">
-                <img src="images/kitchen-649110_1280.jpg" alt="Image of Chefs">
-                <p>At Plant Palette, we create fresh, innovative plant-based dishes with locally sourced, ethical ingredients. Our passion for sustainability and bold flavors makes every meal a vibrant, nourishing experience—whether you dine in, take out, or cater a special event.</p>
-                <a href="" class="green-button">Read Our Story</a>
-            </div>
+            <article class="about" itemprop="department" itemscope itemtype="https://schema.org/Organization">
+                <img src="images/kitchen-649110_1280.jpg" alt="Image of Chefs" itemprop="image">
+                <p itemprop="description">At Plant Palette, we create fresh, innovative plant-based dishes with locally sourced, ethical ingredients. Our passion for sustainability and bold flavors makes every meal a vibrant, nourishing experience—whether you dine in, take out, or cater a special event.</p>
+                <a href="" class="green-button hvr-fade">Read Our Story</a>
+            </article>
             <h3>Work with Us</h3>
-            <div class="work">
-                <img src="images/waitress-6767345_1280.jpg" alt="Image of Waiters">
-                <p>Join Plant Palette and be part of a team passionate about plant-based cuisine and sustainability. Grow with us in a creative, supportive environment.</p>
-                <a href="" class="green-button">See Details</a>
-            </div>
+            <article class="work" itemprop="department" itemscope itemtype="https://schema.org/Organization">
+                <img src="images/waitress-6767345_1280.jpg" alt="Image of Waiters"  itemprop="image">
+                <p itemprop="description">Join Plant Palette and be part of a team passionate about plant-based cuisine and sustainability. Grow with us in a creative, supportive environment.</p>
+                <a href="" class="green-button hvr-fade">See Details</a>
+            </article>
         </section>
         <section class="contact-form">
-          <h2 class="px-3">Contact Us</h2>
+          <h2 class="px-3" role="form" aria-labelledby="contact-heading">Contact Us</h2>
           <form class="px-3">
             <div class="form-group">
               <div>
@@ -126,34 +122,42 @@
               <label for="exampleFormControlTextarea1">Message</label>
               <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Enter message" rows="4" required></textarea>
             </div>
-            <button type="submit" class="btn btn-md btn-primary" style="background-color: #89BF37; border: none; padding: 0.5rem 2rem;">Submit</button>
+            <button type="submit" class="btn btn-md btn-primary mb-5" style="background-color: #89BF37; border: none; padding: 0.5rem 2rem;">Submit</button>
           </form>
       </section>
-        <footer class="d-flex flex-column align-items-center">
-          <ul class="navbar-nav mx-auto d-flex flex-row gap-2">
-            <li class="nav-item">
-              <a class="nav-link active fs-5" aria-current="page" href="#">Menu</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active fs-5" aria-current="page" href="#">Order</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active fs-5" aria-current="page" href="#">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active fs-5" aria-current="page" href="#">Contact</a>
-            </li>
-           </ul> 
-            <div class="icons d-flex flex-row gap-2">
-              <i class="bi bi-youtube"></i>
-              <i class="bi bi-facebook"></i>
-              <i class="bi bi-twitter"></i>
-              <i class="bi bi-instagram"></i>
-              <i class="bi bi-linkedin"></i>
+      <footer class="d-flex flex-column align-items-center p-4" role="contentinfo">
+        <section class="footer-container row">
+          <div class="footer-menu col-sm-7 pt-3">
+            <ul class="navbar-nav mx-auto d-flex flex-row justify-content-center gap-4">
+              <li class="nav-item"><a class="nav-link active fs-5" href="menu.html">Menu</a></li>
+              <li class="nav-item"><a class="nav-link active fs-5" href="#">Order</a></li>
+              <li class="nav-item"><a class="nav-link active fs-5" href="about.html">About Us</a></li>
+              <li class="nav-item"><a class="nav-link active fs-5" href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-icon col-sm-5 pt-4 pb-5" role="complementary" aria-label="Social media links">
+            <div class="icons d-flex flex-row justify-content-center gap-4">
+              <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <i class="bi bi-youtube fs-4" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <i class="bi bi-facebook fs-4" aria-hidden="true"></i>
+              </a>
+              <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <i class="bi bi-twitter fs-4" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <i class="bi bi-instagram fs-4" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i class="bi bi-linkedin fs-4" aria-hidden="true"></i>
+              </a>
             </div>
-            <p>&copy;PlantPalette @ 2025. All rights reserved.</p>
-        </footer>
-    </main>
+          </div>
+          <hr class="border border-white">
+          <p>&copy; PlantPalette @ 2025. All rights reserved.</p>
+        </section>
+      </footer>
 
     <!-- Don't write anything under this message -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

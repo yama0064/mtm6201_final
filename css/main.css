@@ -83,7 +83,7 @@
       text-align: center; /* Center the text on small screens */
     }
 
-    .paragraphs div {
+    .paragraphs article {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -100,7 +100,7 @@
   }
 
 
-  @media (min-width: 577px) and (max-width: 1200px) {
+  @media (min-width: 577px)  {
     .wrapper {
       display: flex;
       flex-direction: column; /* Switch to column layout for small screens */
@@ -132,7 +132,7 @@
       display: none;
     }
 
-    .paragraphs > div {
+    .paragraphs > article {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto auto;
@@ -145,12 +145,12 @@
       text-align: left;
     }
   
-    .paragraphs > div p {
+    .paragraphs > article p {
       grid-area: text;
       align-self: start;
     }
   
-    .paragraphs > div img {
+    .paragraphs > article img {
       grid-area: image;
       max-width: 100%;
       height: auto;
@@ -158,7 +158,7 @@
       align-self: start;
     }
   
-    .paragraphs > div a {
+    .paragraphs > article a {
       grid-area: button;
       justify-self: center;
       margin-top: 1rem;
@@ -175,9 +175,9 @@
       gap: 1.5rem !important;
     }
 
-    .paragraphs p a {
-      font-size: 1.2rem;
-      line-height: 1.8;
+    .paragraphs p, .paragraphs a {
+      font-size: 1.5rem !important;
+      line-height: 2;
     }
   }
 
@@ -195,14 +195,15 @@
     margin-left: 1rem;
   }
 
-  .paragraphs div img {
+  .paragraphs article img {
     max-width: 100%; /* Image takes up full width of the container */
     height: auto; /* Maintain aspect ratio */
   }
 
   .paragraphs p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 1.6;
+    max-height: 100%;
   }  
 
   .food-menu h3 {
@@ -229,12 +230,12 @@
     display: flex;
     flex-wrap: nowrap; /* Keep items in a single row */
     overflow-x: auto; /* Enable horizontal scrolling */
-    gap: 0.2rem; /* Space between cards */
+    gap: 1rem; /* Space between cards */
     scroll-snap-type: x mandatory; /* Optional: smooth snapping for each item */
   }
   
   .food-menu {
-    max-width: 400px;
+    max-width: 300px;
     max-height: 500px;
     flex: 0 0 auto; /* Prevent shrinking */
     scroll-snap-align: start; /* Optional: align snap */
@@ -263,12 +264,10 @@
   /* Footer */
   footer {
     background-color: var(--secondary-color); /* Use the variable */
-    padding: 1rem 0; /* Add padding for spacing */
-    margin-top: 2rem;
     text-align: center; /* Center the text */
   }
   
-  footer div, footer ul, footer li {
+  footer div, footer section, footer ul, footer li {
     background-color: var(--secondary-color); /* Use the variable */
   }
   
@@ -285,10 +284,41 @@
   footer p {
     background-color: var(--secondary-color); /* Use the variable */
     color: var(--secondary-text-color); /* Use the secondary text color */
-    margin-top: 1rem; /* Add some margin to separate the text from the icons */
+    padding: 0;
+    margin: 0;
+  }
+
+  footer a {
+    text-decoration: none;
+    color: inherit;
+    background-color: var(--secondary-color);
   }
   
   /* Menu Page */
+
+  span {
+    background-color: #fff;
+  }
+
+  .visually-hidden-focusable {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  
+  .visually-hidden-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    border: 2px solid #000;
+    z-index: 10000;
+  }
 
   .menu-nav ul {
     list-style: none; /* Remove bullet points */
@@ -307,4 +337,45 @@
 
   .menu-item {
     cursor: pointer;
+  }
+
+  /* About Us */
+
+
+  #faqs {
+    display:flex;
+    padding-bottom: 2rem;
+  }
+
+  @media (min-width: 577px){
+    #about article:nth-of-type(2) p{
+        grid-area: image;
+        align-self: start;
+    }
+
+    #about article:nth-of-type(2) img{
+      grid-area: text;
+      align-self: start;
+  }
+
+    #about p {
+      font-size: 1rem;
+    }
+
+    #about article:nth-of-type(1), #about article:nth-of-type(3) {
+      text-align: right;
+    }
+
+    #about img {
+      width: auto;
+      height: 100%;
+    }
+    
+  }
+
+  @media (min-width: 768px) {
+    #about p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
   }
